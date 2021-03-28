@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create resource group
+      azure_rm_resourcegroup:
+        name: ansi-vnetrg
+        location: eastus
+    - name: Create virtual network
+      azure_rm_virtualnetwork:
+        resource_group: ansi-vnetrg
+        name: testvnet00
+        address_prefixes: "14.0.0.0/16"
+    - name: Add subnet
+      azure_rm_subnet:
+        resource_group: Testing
+        name: subnet001
+        address_prefix: "14.0.0.0/24"
+        virtual_network: testvnet00
