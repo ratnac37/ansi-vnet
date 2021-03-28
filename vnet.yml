@@ -12,7 +12,7 @@
         address_prefixes: "14.0.0.0/16"
     - name: Add subnet
       azure_rm_subnet:
-        resource_group: Testing
+        resource_group: ansi-vnetrg
         name: subnet001
         address_prefix: "14.0.0.0/24"
         virtual_network: testvnet00
