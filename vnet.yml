@@ -16,4 +16,4 @@
         resource_group: ansi-vnetrg000
         name: subnet22
         address_prefix: "13.0.0.0/24"
-        virtual_network: testvnet22
+        virtual_network: testvnet00
